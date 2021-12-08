@@ -1,0 +1,98 @@
+/*--------------------------------
+Show Styles
+--------------------------------*/
+
+.show-table {
+    width: 100%;
+    margin-bottom: 40px;
+    border-spacing: 0;
+    tr {
+        border-bottom: 1px solid #bdbdbd;
+        transition: all 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        background-repeat: no-repeat;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-image: url(../images/bg/show-table-bg.jpg);
+            .show-date,
+            .show-hall,
+            .show-name {
+                color: #ffffff;
+            }
+            .date:after {
+                background-color: #ffffff;
+            }
+        }
+    }
+    td {
+        vertical-align: middle;
+        padding: 30px 0;
+    }
+}
+
+.show-date {
+    line-height: 100%;
+    transition: all 0.3s ease;
+    width: 200px;
+    tr:hover & {
+        padding-left: 30px;
+    }
+    .date {
+        display: block;
+        font-size: 3.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        position: relative;
+        line-height: 1;
+        padding-bottom: 5px;
+        &:after {
+            content: "";
+            width: 20px;
+            height: 3px;
+            background-color: #111111;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .day {
+        display: block;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+}
+
+.show-hall {
+    line-height: 100%;
+    .hall-name {
+        font-size: 1.8rem;
+        font-weight: 500;
+        display: block;
+        margin: 0;
+    }
+}
+
+.show-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.show-ticket {
+    text-align: right;
+    transition: all 0.3s ease;
+    width: 200px;
+    tr:hover & {
+        padding-right: 30px;
+        .btn.btn-border {
+            background-color: transparent;
+            border-color: #ffffff;
+            color: #ffffff !important;
+        }
+    }
+}

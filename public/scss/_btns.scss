@@ -1,0 +1,195 @@
+/*----------------------------
+Button 
+----------------------------*/
+
+.btn {
+    line-height: 38px;
+    border: 2px solid $primaryColor;
+    background-color: $primaryColor;
+    color: #ffffff !important;
+    padding: 0 29px;
+    border-radius: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:visited {
+        background-color: $primaryColor;
+        box-shadow: none;
+        outline: none;
+        color: #ffffff !important;
+    }
+    &:hover,
+    &:hover:active,
+    &:hover:focus,
+    &:hover:active:focus {
+        background-color: #111111;
+        border-color: #111111;
+        color: #ffffff !important;
+        .fa {
+            color: #ffffff;
+        }
+    }
+    .fa {
+        margin-right: 4px;
+        color: $primaryColor;
+    }
+    &.btn-border {
+        background-color: transparent;
+        color: $primaryColor !important;
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:visited {
+            background-color: transparent;
+            color: $primaryColor !important;
+        }
+        &:hover,
+        &:hover:active,
+        &:hover:focus,
+        &:hover:active:focus {
+            background-color: $primaryColor;
+            color: #ffffff !important;
+        }
+        &.btn-white {
+            background-color: transparent;
+            color: #ffffff !important;
+            &:focus,
+            &:visited,
+            &:active,
+            &:focus:visited,
+            &:active:focus {
+                background-color: #ffffff;
+                color: #ffffff !important;
+            }
+            &:hover,
+            &:focus:hover,
+            &:active:hover,
+            &:active:focus:hover {
+                color: $primaryColor !important;
+            }
+        }
+        &.btn-black {
+            background-color: transparent;
+            color: #111111 !important;
+            border-color: #111111;
+            &:focus,
+            &:visited,
+            &:active,
+            &:focus:visited,
+            &:active:focus {
+                color: #111111 !important;
+                border-color: #111111;
+            }
+            &:hover,
+            &:focus:hover,
+            &:active:hover,
+            &:active:focus:hover {
+                color: #ffffff !important;
+                border-color: $primaryColor;
+            }
+        }
+    }
+    &.btn-white {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: $primaryColor !important;
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:visited {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: $primaryColor !important;
+        }
+        &:hover,
+        &:hover:active,
+        &:hover:focus,
+        &:hover:active:focus {
+            background-color: #f7f7f7;
+            border-color: #f7f7f7;
+            color: #111111 !important;
+        }
+        &.btn-simple {
+            color: #ffffff !important;
+            &:focus,
+            &:visited,
+            &:active,
+            &:active:focus {
+                color: #ffffff !important;
+                .fa {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    &.btn-black {
+        background-color: #111111;
+        border-color: #111111;
+        color: #ffffff !important;
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:visited {
+            background-color: #111111;
+            border-color: #111111;
+            color: #ffffff !important;
+        }
+        &:hover,
+        &:hover:active,
+        &:hover:focus,
+        &:hover:active:focus {
+            background-color: $primaryColor;
+            border-color: $primaryColor;
+            color: #ffffff !important;
+        }
+    }
+    &.btn-simple {
+        border-color: transparent;
+        background-color: transparent;
+        color: #111111 !important;
+        &:focus,
+        &:visited,
+        &:active,
+        &:active:focus {
+            border-color: transparent;
+            background-color: transparent;
+            color: #111111 !important;
+        }
+        &:hover,
+        &:active:hover,
+        &:focus:hover,
+        &:hover:active:focus {
+            color: #ffffff !important;
+            background-color: $primaryColor;
+            border-color: $primaryColor;
+        }
+    }
+    &.btn-lg {
+        line-height: 49px;
+        border-radius: 26.5px;
+        padding: 0 39px;
+        &.btn-simple {
+            padding: 0 27px;
+        }
+    }
+    &.btn-sm {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 29px;
+        border-radius: 17px;
+        padding: 0 19px;
+    }
+}
+
+.button-group {
+    .btn {
+        +.btn:not(.btn-simple) {
+            margin-left: 26px;
+        }
+    }
+}

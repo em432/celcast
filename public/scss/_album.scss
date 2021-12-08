@@ -1,0 +1,157 @@
+/*----------------------------
+Album
+----------------------------*/
+
+.album-info-section {
+    overflow: hidden;
+}
+
+.about-album {
+    padding-top: 70px;
+    .album-name {
+        text-transform: uppercase;
+        margin-top: 0;
+        font-size: 3.4rem;
+        margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .album-information-list {
+        margin-top: 50px;
+        p {
+            margin-bottom: 0;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+        .album-info-item {
+            display: inline-block;
+            min-width: 110px;
+        }
+        .album-info-value {
+            margin-left: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+
+/*** Track Section ***/
+
+.tracks-section {
+    background-image: url(../images/bg/album-tracks-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    .overlay {
+        background-color: rgba(#111111, 0.8);
+    }
+}
+
+
+/*** Album Review ***/
+
+.album-review {
+    text-align: center;
+    blockquote {
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+    .review-rating {
+        margin-top: 16px;
+    }
+    .reviewer-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .reviewer-profession {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+}
+
+.album-review-carousel {
+    .owl-buttons {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .owl-prev,
+    .owl-next {
+        display: inline-block;
+        font-size: 1.8rem;
+        color: #111111;
+        border: 2px solid $primaryColor;
+        height: 40px;
+        width: 40px;
+        line-height: 36px;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: $primaryColor;
+            color: #ffffff;
+        }
+    }
+}
+
+.rating-star {
+    color: $primaryColor;
+    +.rating-star {
+        margin-left: 6px;
+    }
+    &:before {
+        content: "\f006";
+        font-family: "FontAwesome";
+        font-size: 1.4rem;
+    }
+    &.on {
+        &:before {
+            content: "\f005";
+        }
+    }
+}
+
+
+/*** Purchase From ***/
+
+.purchase-section {
+    background-image: url(../images/bg/purchase-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    .overlay {
+        background-color: rgba(#111111, 0.8);
+    }
+}
+
+.purchase-button-wrap {
+    margin-top: 35px;
+    text-align: right;
+    .btn {
+        text-transform: none;
+        padding: 0;
+        min-width: 166px;
+        text-align: center;
+        +.btn {
+            margin-left: 26px;
+        }
+        i {
+            color: #ffffff;
+        }
+        &.btn-border.btn-white {
+            &:hover {
+                background-color: $primaryColor;
+                color: #ffffff;
+                border-color: $primaryColor;
+            }
+        }
+    }
+}

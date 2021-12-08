@@ -1,0 +1,125 @@
+/*----------------------------
+Gallery
+----------------------------*/
+
+.grid-sizer {
+    width: 10%;
+}
+
+.grid-item {
+    width: 10%;
+    &.grid-item--width2 {
+        width: 20%;
+    }
+    &.grid-item--width3 {
+        width: 30%;
+    }
+    &.grid-item--width4 {
+        width: 40%;
+    }
+    &.grid-item--width5 {
+        width: 50%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/*----- Gallery Grid ---*/
+
+.gallery {
+    &:not(.row){
+        width: 100%;
+    }
+    &.column-4 {
+        margin-bottom: -30px;
+    }
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+}
+
+.gallery-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#111111, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+    margin-top: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in;
+    color: #ffffff;
+    .image-large {
+        font-size: 1.8rem;
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+.gallery-title {
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.gallery-item:hover {
+    .gallery-hover {
+        visibility: visible;
+        opacity: 1;
+    }
+    .gallery-content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.filter-button-group {
+    margin-bottom: 60px;
+    text-align: center;
+    button {
+        border: 1px solid #e7e7e7;
+        line-height: 31px;
+        height: 31px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #111111;
+        background-color: transparent;
+        padding: 0 19px;
+        transition: all 0.3s ease;
+        +button {
+            margin-left: 6px;
+        }
+        &:hover {
+            color: $primaryColor;
+            border-color: $primaryColor;
+        }
+        &.active {
+            color: #ffffff;
+            background-color: $primaryColor;
+            border-color: $primaryColor;
+        }
+    }
+}

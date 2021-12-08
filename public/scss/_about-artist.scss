@@ -1,0 +1,202 @@
+/*--------------------------------
+About Artist
+--------------------------------*/
+
+.artist-info-section {
+    overflow: hidden;
+    .artist-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.about-artist {
+    padding-top: 185px;
+    padding-bottom: 64px;
+    .artist-name {
+        text-transform: uppercase;
+        margin-top: 0;
+        font-size: 3.4rem;
+        margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .artist-information-list {
+        margin-top: 50px;
+        p {
+            margin-bottom: 0;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+        .artist-info-item {
+            display: inline-block;
+            min-width: 110px;
+        }
+        .artist-info-value {
+            margin-left: 15px;
+            display: inline-block;
+        }
+        .artist-social {
+            color: #111111;
+            display: inline-block;
+            +.artist-social {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+/*** Video Player ***/
+
+.plyr {
+    .plyr__play-large {
+        padding: 40px;
+        border: none;
+        background-color: #ffffff;
+        svg {
+            color: $primaryColor;
+        }
+    }
+    input[type=range] {
+        background-color: transparent !important;
+        padding: 0 !important;
+        &:active {
+            &::-webkit-slider-thumb {
+                background-color: $primaryColor;
+            }
+        }
+    }
+    .plyr__progress--played,
+    .plyr__volume--display {
+        color: $primaryColor;
+    }
+}
+
+.plyr--video .plyr__controls {
+    padding: 20px 10px 30px;
+}
+
+.plyr--video .plyr__controls button.tab-focus:focus,
+.plyr--video .plyr__controls button:hover {
+    background-color: $primaryColor;
+}
+
+
+/*** Artist Gallery ***/
+
+.artist-gallery-item {
+    position: relative;
+    text-align: center;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .artist-gallery-hover {
+        background-color: rgba($primaryColor, 0.77);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #ffffff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .artist-gallery-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        transform: translateY(-50%);
+        margin-top: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    .gallery-zoom {
+        font-size: 3.5rem;
+        color: #ffffff;
+        line-height: 1;
+    }
+    .artist-image-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    &:hover {
+        .artist-gallery-hover {
+            visibility: visible;
+            opacity: 1;
+        }
+        .artist-gallery-content {
+            margin-top: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.artist-gallery-carousel {
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: #111111;
+        color: #ffffff;
+        font-size: 1.8rem;
+        width: 30px;
+        text-align: center;
+        line-height: 1;
+        opacity: 0;
+        transition: all 0.3s ease;
+        &:hover {
+            opacity: 1;
+        }
+        .fa {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .owl-prev {
+        left: 0;
+    }
+    .owl-next {
+        right: 0;
+    }
+    &:hover {
+        .owl-prev,
+        .owl-next {
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.instagram-feed-link {
+    background-color: #111111;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    &:hover {
+        color: #ffffff;
+        background-color: $primaryColor;
+    }
+    .fa {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,129 @@
+/*--------------------------------
+Latest Album
+--------------------------------*/
+.latest-album-carousel-wrap{
+    width: 100%;
+}
+
+.latest-album-section {
+    background-image: url(../images/bg/upcoming-stage-bg.jpg);
+    padding: 40px 0;
+    .section-header {
+        margin-top: 110px;
+    }
+}
+
+.recent-albums {
+    text-align: right;
+    width: 450px;
+}
+
+.recent-album {
+    height: 335px;
+    display: block;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($primaryColor, 0.77);
+        z-index: 2;
+        transition: all 0.5s ease-in;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .album-thumb {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .album-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 3;
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 0.2s;
+        transition-duration: 0.3s;
+        .album-title {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            display: block;
+            line-height: 1.3;
+        }
+        .album-by {
+            font-size: 1.4rem;
+            display: block;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1;
+            margin-top: 60px;
+            opacity: 0;
+            visibility: hidden;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+        }
+    }
+}
+
+.recent-album-carousel {
+    .owl-prev,
+    .owl-next {
+        font-size: 2.2rem;
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        text-align: center;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .owl-prev {
+        left: 0;
+    }
+    .owl-next {
+        right: 0;
+    }
+}
+
+.recent-album-carousel:hover {
+    .recent-album:before {
+        opacity: 1;
+        visibility: visible;
+    }
+    .album-content {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        .album-by {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 10px;
+        }
+    }
+    .owl-prev,
+    .owl-next {
+        opacity: 1;
+        visibility: visible;
+    }
+}

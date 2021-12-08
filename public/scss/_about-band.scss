@@ -1,0 +1,150 @@
+/*----------------------------
+About Band
+----------------------------*/
+
+.about-band-section {
+    .section-header {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.band-img {
+    display: inline-block;
+    float: none;
+    margin: -110px auto 0;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+}
+
+.band-info-section {
+    padding: 60px 0;
+}
+
+.band-info-item {
+    text-align: center;
+}
+
+.band-info-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.band-info-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.band-info-content {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.what-we-do-section {
+    .side-img {
+        background-image: url(../images/band/what-we-do.jpg);
+    }
+}
+
+.doing-item {
+    +.doing-item {
+        margin-top: 45px;
+    }
+    .doing-icon {
+        color: $primaryColor;
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    .doing-title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*** Meet Band Artist ***/
+
+.band-artists {
+    zoom: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.band-artist {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    text-align: center;
+    &:nth-child(odd) {
+        margin-top: 70px;
+    }
+    .artist-name {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-top: 17px;
+        margin-bottom: 2px;
+    }
+    .artist-role {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 0;
+        letter-spacing: 3.7px;
+    }
+}
+
+.band-artist-thumb {
+    position: relative;
+}
+
+.band-artist-hover {
+    position: absolute;
+    background-color: rgba($primaryColor, 0.66);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    .btn {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50px;
+        color: #111111;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+
+.band-artist:hover {
+    .band-artist-hover {
+        opacity: 1;
+        visibility: visible;
+        .btn {
+            visibility: visible;
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+}
+
+
+/*** Lates Album Carousel ***/
+
+.latest-album-carousel {
+    .latest-album {
+        display: block;
+        margin: 0 15px;
+        img {
+            width: 100%;
+        }
+    }
+}

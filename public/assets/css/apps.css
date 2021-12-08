@@ -1,0 +1,407 @@
+/* This css file is to override bootstarp css
+********************************************************* /
+* Theme Name: AxilBoard Admin Dashboard
+* Theme URI:  http://themeforest.ne/user/codepassenger
+* Author: CodePassenger
+* Author URI: http://CodePassenger.com
+* Description:  AxilBoard Bootstrap 4 Admin Template
+* Version: 1.0.0
+* License: GNU General Public License v2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+* Tags: admin dashboard,admin template,site template, html5, template
+*********************************************************** /
+
+
+/*
+|----------------------------------------------------------------------------
+| CSS INDEX
+|----------------------------------------------------------------------------
+
+
+1. General Style
+
+2. Apps Common Style
+
+3. Header Style
+
+4. Breadcrumb Style
+
+5. Activity Style
+
+6. Weather Style
+
+7. Event-callender Style
+
+8. Chats Style
+
+9. Alert Style
+
+10. Buttons Style
+
+11. Pagination Style
+
+12. Progress-bar Style
+
+13. Chart Style
+
+14. Basic-table Style
+
+15. Data-table Style
+
+16. Google-map Style
+
+17. Vector-map Style
+
+18. Profile Style
+
+19. Form-elements Style
+
+20. Form-validations Style
+
+21. Tree-view Style
+
+22. Tab Style
+
+23. Input-mask Style
+
+24. Inbox Style
+
+25. Mail-view Style
+
+27. Mail-compose Style
+
+*/
+/*
+|----------------------------------------------------------------------------
+| 1. General Styles
+|----------------------------------------------------------------------------
+*/
+html, html a {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #111;
+  font-weight: 400; }
+
+p {
+  line-height: 26px;
+  font-size: 14px;
+  margin-bottom: 30px; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  line-height: 100%;
+  font-weight: 500; }
+
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 14px; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: inline-block; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+  transition: 0.4s ease-in; }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #111;
+    outline: 0; }
+
+iframe {
+  border: 0; }
+
+/*
+|----------------------------------------------------------------------------
+| 2. Apps Common Styles
+|----------------------------------------------------------------------------
+*/
+.player-main-block {
+  margin-bottom: 10px; }
+
+.album-art-block {
+  position: relative; }
+  .album-art-block .track-meta-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+    z-index: 99; }
+  .album-art-block .song-name {
+    font-size: 18px;
+    display: block;
+    margin-bottom: -7px; }
+  .album-art-block .song-artist-album {
+    padding: 3px;
+    font-size: 12px;
+    background: #595959;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #595959 12%, #474747 32%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #666666 100%, #131313 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #595959 12%, #474747 32%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #666666 100%, #131313 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #595959), color-stop(32%, #474747), color-stop(51%, black), color-stop(60%, #111111), color-stop(76%, #2b2b2b), color-stop(91%, #1c1c1c), color-stop(100%, #666666), to(#131313));
+    background: -o-linear-gradient(top, #595959 12%, #474747 32%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #666666 100%, #131313 100%);
+    background: linear-gradient(to bottom, #595959 12%, #474747 32%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #666666 100%, #131313 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#595959', endColorstr='#131313',GradientType=0 ); }
+
+.overlay-one {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); }
+
+.audio-controller-wrap {
+  padding: 20px 20px 10px 20px;
+  background: #f7f7f7; }
+
+.controller-common {
+  height: 33px;
+  width: 33px;
+  background: #fc427f;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 33px;
+  cursor: pointer;
+  margin: 0 3px;
+  display: inline-block;
+  position: relative; }
+  .controller-common:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'FontAwesome'; }
+
+.amplitude-prev:before {
+  content: "\f048"; }
+
+.play-pause-btn:before {
+  content: "\f04b"; }
+
+.play-pause-btn.amplitude-playing:before {
+  content: "\f04c"; }
+
+.amplitude-next:before {
+  content: "\f051"; }
+
+.audio-controller-block {
+  text-align: center;
+  margin-bottom: 5px; }
+
+.player-footer .volume-container,
+.player-footer .controller-group {
+  display: inline-block;
+  width: 49.5%; }
+
+.player-footer .controller-group {
+  text-align: right; }
+
+.player-footer .controller-group-element {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer; }
+
+.volume-container {
+  position: relative;
+  padding-left: 22px; }
+  .volume-container i.fa {
+    position: absolute;
+    left: 0;
+    top: 7px; }
+
+/*--- input range style group ---
+
+input[type=range]{
+	overflow: none;
+	background-color: $semi_deep_gray;
+    -webkit-appearance: none;
+	
+}
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    border: none;
+    border-radius: 0px;
+	 -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    background: #434343;
+      box-shadow: -80px 0 0 80px #43e5f7;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range].full-width{
+	width: 100%;
+}
+
+
+
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #9a905d;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #9a905d;
+}
+
+input[type=range].volume-slider-one::-webkit-slider-runnable-track {
+    height: 2px;
+    background: #ddd;
+    border: none;
+    border-radius: 0px;
+}
+input[type=range].volume-slider-one::-webkit-slider-thumb{
+	 -webkit-appearance: none;
+    border: none;
+    height: 10px;
+    width: 2px;
+	border-radius: 0;
+    background: $deep_gray;
+    margin-top: -4px;
+}
+
+input[type=range].volume-slider-one{
+	width: 90px;
+}
+*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #d7d7d7;
+    width: 100%; }
+  input[type=range].volume-slider-one {
+    width: 90px; }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #fc427f;
+    margin-top: -1px; }
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: transparent; }
+  input[type=range]:focus {
+    outline: none; } }
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #fc427f; }
+
+input[type="range"]::-moz-range-track {
+  background-color: #fc427f; }
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #fc427f; }
+
+input[type="range"]::-ms-fill-upper {
+  background-color: #fc427f; }
+
+/*--- time duration style group ---*/
+.duration-2 {
+  text-align: center;
+  font-size: 0; }
+  .duration-2 .current-time,
+  .duration-2 .duration {
+    display: inline-block;
+    width: 50px; }
+  .duration-2 .current-time,
+  .duration-2 .duration,
+  .duration-2 .divider {
+    font-size: 14px; }
+
+.song-meta-data span {
+  display: block;
+  line-height: 23px; }
+
+.player-track-list-block {
+  border-right: 6px solid #b7b7b7; }
+
+.slimScrollBar {
+  width: 6px !important;
+  opacity: 1 !important;
+  right: 0 !important;
+  border-radius: 0px !important;
+  background: #fc427f !important;
+  display: none; }
+
+.player-track-list-block {
+  padding: 20px 30px 0px 30px;
+  background: #f7f7f7; }
+
+.amplitude-song-container {
+  position: relative;
+  margin: 20px 0; }
+
+.track-right-content {
+  position: absolute;
+  right: 0px;
+  top: 15px; }
+
+.amplitude-song-container.amplitude-playing:before {
+  content: '';
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background: #fc427f; }
+
+.amplitude-song-container.amplitude-playing .song-title {
+  color: #fc427f; }

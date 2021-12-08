@@ -1,0 +1,41 @@
+/*--------------------------------
+404 Styles
+--------------------------------*/
+
+.section-404 {
+    .img-404 {
+        display: inline-block;
+        float: none;
+        margin: 0 auto;
+    }
+    .title-404 {
+        font-weight: 500;
+        font-size: 3.4rem;
+        margin-top: 44px;
+        margin-bottom: 52px;
+    }
+    .searchform {
+        position: relative;
+        width: 100%;
+        max-width: 570px;
+        margin: 0 auto;
+        float: none;
+        [type=search] {
+            border: 1px solid #e7e7e7;
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 1.4rem;
+            padding: 17px 30px;
+        }
+        [type=submit] {
+            color: $primaryColor;
+            background-color: transparent;
+            border: 1px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.8rem;
+            padding: 13px 30px;
+        }
+    }
+}

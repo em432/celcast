@@ -1,0 +1,47 @@
+/*--------------------------------
+Subscription
+--------------------------------*/
+
+.subscription-area {
+    .subscription {
+        width: 100%;
+        position: relative;
+        text-align: right;
+        font-size: 0;
+        margin-top: 39px;
+         ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #ffffff;
+            opacity: 0.22;
+        }
+         ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ffffff;
+            opacity: 0.22;
+        }
+         :-ms-input-placeholder {
+            /* IE 10+ */
+            color: #ffffff;
+            opacity: 0.22;
+        }
+         :-moz-placeholder {
+            /* Firefox 18- */
+            color: #ffffff;
+            opacity: 0.22;
+        }
+        [type=email] {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: #ffffff;
+            color: #ffffff !important;
+            background-color: transparent !important;
+            margin-right: 26px;
+            width: calc(100% - 161px);
+            padding: 8px 0;
+        }
+        .btn {
+            text-transform: none;
+            min-width: 135px;
+        }
+    }
+}

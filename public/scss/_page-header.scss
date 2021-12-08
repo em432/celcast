@@ -1,0 +1,48 @@
+/*--------------------------------
+Page Header
+--------------------------------*/
+
+.page-header {
+    background-image: url(../images/bg/page-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 160px 0;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+.breadcrumb {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    display: block;
+    font-size: 0;
+    >li {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #ffffff;
+        display: inline-block;
+        >a {
+            color: #ffffff;
+        }
+        &.active {
+            color: #ffffff;
+        }
+        +li {
+            &:before {
+                color: #ffffff !important;
+                padding: 0 1px;
+            }
+        }
+    }
+}
+
+.page-title {
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}

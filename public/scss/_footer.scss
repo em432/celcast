@@ -1,0 +1,58 @@
+/*----------------------------
+Footer
+----------------------------*/
+
+.logo-social-area {
+    background-image: url(../images/bg/footer.jpg);
+    background-position: center center;
+    background-size: cover;
+    .socials {
+        margin-top: 12px;
+        a {
+            color: #ffffff;
+            font-size: 2.4rem;
+            display: inline-block;
+            +a {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.logo-footer {
+    display: inline-block;
+}
+
+.footer-contact {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 26px;
+    p {
+        display: inline-block;
+        margin-bottom: 0;
+        +p {
+            margin-left: 25px;
+        }
+    }
+}
+
+.copyright-footer {
+    background-color: #111111;
+    border-top: 1px solid #4b4a4a;
+    color: #ffffff;
+    padding: 22px 0;
+    p {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .credit-text {
+        text-align: right;
+    }
+    a {
+        color: #ffffff;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}

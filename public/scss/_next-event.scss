@@ -1,0 +1,38 @@
+/*----------------------------
+Next Event
+----------------------------*/
+
+.next-event-section {
+    background-image: url(../images/bg/about-singer-bg.jpg);
+}
+
+.next-event-content {
+    .next-event-title {
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .next-event-place {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        margin-top: 5px;
+        padding-left: 120px;
+        position: relative;
+        &:before {
+            content: "";
+            width: 100px;
+            height: 8px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            top: 12px;
+        }
+    }
+    .about-next-event {
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+    .button-group {
+        margin-top: 50px;
+    }
+}

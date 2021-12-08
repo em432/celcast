@@ -1,0 +1,39 @@
+/*----------------------------
+Upcoming Album
+----------------------------*/
+
+.upcoming-album {
+    padding: 93px 70px 93px 20px;
+    .album-art {
+        display: inline-block;
+        width: 364px;
+        margin-right: 56px;
+        float: left;
+    }
+    .album-content {
+        display: inline-block;
+        float: left;
+        width: calc(100% - 420px);
+    }
+    .album-title {
+        font-weight: 3.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .release-date {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    .album-excerpt {
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+    .btn {
+        margin-top: 22px;
+    }
+}

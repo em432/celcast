@@ -1,0 +1,83 @@
+/*--------------------------------
+Banner
+--------------------------------*/
+
+.banner-item {
+    height: 768px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.banner-item-1 {
+    background-image: url(../images/banner/1.jpg);
+}
+
+.banner-item-2 {
+    background-image: url(../images/banner/2.jpg);
+}
+
+.banner-item-3 {
+    background-image: url(../images/banner/3.jpg);
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+}
+
+.banner-subtitle {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.banner-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.banner-slider {
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        margin-top: 25px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 120px;
+        background-color: #111111;
+        opacity: 0;
+        visibility: hidden;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 120px;
+        text-align: center;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: $primaryColor;
+            opacity: 1;
+        }
+    }
+    .owl-prev {
+        left: 0;
+    }
+    .owl-next {
+        right: 0;
+    }
+    &:hover {
+        .owl-prev,
+        .owl-next {
+            opacity: 0.6;
+            visibility: visible;
+        }
+    }
+}

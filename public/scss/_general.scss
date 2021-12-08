@@ -1,0 +1,192 @@
+/*----------------------------
+General
+----------------------------*/
+
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: $baseFontSize;
+    font-family: $baseFont;
+    color: $baseColor;
+    font-weight: $baseFontWeight;
+    line-height: $baseLineHeight;
+}
+
+h1,
+.h1 {
+    font-size: 6.4rem;
+}
+
+h2,
+.h2 {
+    font-size: 4.2rem;
+}
+
+h3,
+.h3 {
+    font-size: 3.4rem;
+}
+
+h4,
+.h4 {
+    font-size: 2.2rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.6rem;
+}
+
+h6,
+.h6 {
+    font-size: 1.2rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    line-height: $headignLineHeight;
+    font-weight: $headingFontWeight;
+}
+
+a {
+    color: $primaryColor;
+    transition: all 0.3s ease;
+    &:focus,
+    &:visited,
+    &:active {
+        color: $primaryColor;
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #111111;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.section {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section-padding {
+    padding: 120px 0;
+    &.bottom-0 {
+        padding-bottom: 0;
+    }
+}
+
+.theme-bg {
+    background-color: $primaryColor;
+    color: #ffffff;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.gray-bg {
+    background-color: #d5cfd7;
+}
+
+.black-bg {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.theme-color {
+    color: $primaryColor;
+}
+
+.section-header {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    .section-title {
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .section-subtext {
+        margin-top: 5px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 100px;
+        left: 50%;
+        bottom: 0;
+        margin-left: -50px;
+        background-color: #111111;
+        .text-white &,
+        .theme-bg & {
+            background-color: #ffffff;
+        }
+    }
+    &.left-style {
+        padding-bottom: 0;
+        padding-top: 15px;
+        margin-bottom: 0;
+        .section-title {
+            font-size: 4.2rem;
+            line-height: 1.35;
+        }
+        &:after {
+            left: 0;
+            margin-left: 0;
+            top: 0;
+        }
+    }
+    &.style-3 {
+        &:after {
+            content: none;
+        }
+        .section-subtext {
+            text-transform: none;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+        .btn {
+            text-transform: none;
+            margin-top: 25px;
+        }
+    }
+}
+
+.fluid-container {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    .half {
+        width: 50%;
+        display: inline-block;
+        float: left;
+    }
+}
+
+.side-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}

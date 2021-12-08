@@ -1,0 +1,53 @@
+/*----------------------------
+Upcoming Stage
+----------------------------*/
+
+.upcoming-stage-section {
+    background-image: url(../images/bg/upcoming-stage-bg.jpg);
+    .section-header {
+        margin-top: 35px;
+    }
+}
+
+.stage-countdown-wrap {
+    float: right;
+    text-align: left;
+    max-width: 420px;
+    width: 100%;
+}
+
+.stage-title {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.stage-location {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.countdown-stage {
+    width: 100%;
+    background-color: $primaryColor;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 13px 30px;
+    .section_count {
+        display: inline-block;
+        line-height: 1;
+        width: 25%;
+        .tcount {
+            display: block;
+            font-weight: 700;
+            font-size: 4.2rem;
+        }
+        .text {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+    }
+}
