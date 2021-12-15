@@ -25,7 +25,9 @@ contract CelCast{
         string excerpt;
         string excerptImage;
         string audioLink;
+        string [] reports;
         uint fans;
+        uint downvotes;
     }
 
     mapping (uint => Podcast) internal podcasts;
@@ -42,14 +44,14 @@ contract CelCast{
         string memory _excerptImage,
         string memory _audioLink
     )public{
-        podcasts[podcastLength] = Podcast(
-            payable(msg.sender),
-            _title,
-            _excerpt,
-            _excerptImage,
-            _audioLink,
-            0
-        );
+        Podcast storage podcast = podcasts[podcastLength];
+        podcast.owner = payable(msg.sender);
+        podcast.title = _title;
+        podcast.excerpt = _excerpt;
+        podcast.excerptImage = _excerptImage;
+        podcast.audioLink = _audioLink;
+        podcast.fans = 0;
+        podcast.downvotes = 0;
         podcastLength++;
     }
 
@@ -60,15 +62,20 @@ contract CelCast{
         string memory,
         string memory,
         string memory,
+        string [] memory,
+        uint,
         uint
     ){
-        return(
-            podcasts[_index].owner,
-            podcasts[_index].title,
-            podcasts[_index].excerpt,
-            podcasts[_index].excerptImage,
-            podcasts[_index].audioLink,
-            podcasts[_index].fans
+         Podcast storage podcast = podcasts[_index];
+        return(           
+            podcast.owner,
+            podcast.title,
+            podcast.excerpt,
+            podcast.excerptImage,
+            podcast.audioLink,
+            podcast.reports,
+            podcast.fans,
+            podcast.downvotes
         );
     }
 
@@ -85,7 +92,25 @@ contract CelCast{
         podcasts[_index].fans++;
     }
 
+    function downVotePodcast(uint _index) notOwner(_index) public payable{
+        
+            require(
+          IERC20Token(cUsdTokenAddress).transferFrom(
+                msg.sender,
+                podcasts[_index].owner,
+                1000000000000000000
+            ),
+            "Transaction could not be performed"  
+        );
+        podcasts[_index].downvotes++;
+    }
+
+    function reportPodcast(uint _index, string memory _report) notOwner(_index) public {
+        podcasts[_index].reports.push(_report);
+    }
+
     function getPodcastLength() public view returns (uint) {
         return (podcastLength);
     }
+
 }
